@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        img{
+          width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+    <img src="../tecnologia1.jpg" alt="">
+
+    <script>
+        document.querySelector("title").innerHTML=("Carrusel");
+        document.querySelector("h1").innerHTML=("Carrusel");
+        document.querySelector("p").innerHTML=("prueba");
+
+        document.body.style.textAlign="center";
+
+       const fotos=["../tecnologia1.jpg","../tecnologia2.jpg","../tecnologia3.jpg"]
+       const alts=["tecnologia1","tecnologia2","tecnologia3"]
+       let contador=0
+
+       function cambiar(){
+        contador=contador+1
+        document.images[0].src=fotos[contador]
+        document.images[0].alt=alts[contador]
+        if(contador==2)contador=-1
+       }
+        
+      setInterval(cambiar,3000)
+    </script>
+</body>
+</html>
